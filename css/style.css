@@ -1,0 +1,253 @@
+/* =====================
+   RESET
+===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =====================
+   GLOBAL
+===================== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #0F172A; /* dark navy */
+    color: #E5E7EB; /* light gray */
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: #1E293B;
+    margin: 40px 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =====================
+   HEADER
+===================== */
+header {
+    background: #020617;
+    padding: 15px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand h2 {
+    color: #E5E7EB;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+nav {
+    margin-left: auto; /* PENTING: dorong nav ke kanan */
+}
+
+nav a {
+    margin-left: 25px;
+    color: #38BDF8;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #7DD3FC;
+}
+
+nav a.active {
+    color: #7DD3FC;
+    border-bottom: 2px solid #7DD3FC;
+    padding-bottom: 4px;
+}
+
+
+/* =====================
+   MAIN
+===================== */
+main {
+    padding: 60px 10%;
+}
+
+/* =====================
+   HERO SECTION
+===================== */
+#hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #38BDF8;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: #CBD5F5;
+}
+
+/* =====================
+   PROFILE
+===================== */
+#profile {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+#profile img {
+    width: 115px;
+    height: 120px;
+    border-radius: 70%;
+    margin: 0 auto 20px;
+    background: #1E293B;
+}
+
+#profile h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #38BDF8;
+}
+
+#profile p {
+    color: #D1D5DB;
+    font-size: 1rem;
+}
+
+/* =====================
+   PROJECT
+===================== */
+#project {
+    max-width: 900px;
+    margin: auto;
+}
+
+#project h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #38BDF8;
+}
+
+#project h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #7DD3FC;
+}
+
+#project p {
+    margin-bottom: 25px;
+    color: #D1D5DB;
+}
+
+/* =====================
+   CONTACT
+===================== */
+#contact {
+    text-align: center;
+}
+
+#contact a {
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    background: #020617;
+    color: #38BDF8;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#contact a:hover {
+    background: #38BDF8;
+    color: #020617;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    color: #94A3B8;
+    font-size: 0.9rem;
+}
+
+/* =====================
+   SOCIAL ICONS
+===================== */
+#contact {
+    text-align: center;
+    margin-top: 40px;
+}
+.social-img {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.social-img img {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.social-img:hover img {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 40px 5%;
+    }
+}
+
+/* =====================
+   SCROLL ANIMATION
+===================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
